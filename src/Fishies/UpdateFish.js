@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button} from 'reactstrap'
-
+import APIURL from '../helpers/environment';
 
 const UpdateFish= (props)=> {
     const [editSpecies, setEditSpecies]= useState(props.fishToUpdate.species);
@@ -11,7 +11,7 @@ const UpdateFish= (props)=> {
 
     const updateCurrent = (event)=> {
         event.preventDefault()
-        fetch(`http://localhost:4000/api/fished/update/${props.fishToUpdate.id}`, {
+        fetch(`${APIURL}api/fished/update/${props.fishToUpdate.id}`, {
             method: 'PUT',
             headers: new Headers({
                 'Content-Type': 'application/json',

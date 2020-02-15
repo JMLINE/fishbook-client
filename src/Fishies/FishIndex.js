@@ -6,6 +6,7 @@ import FishTable from './FishTable'
 import UpdateFish from './UpdateFish'
 import FishModal from './FishModal'
 
+import APIURL from '../helpers/environment';
 
 const FishIndex = (props) => {
     const [fished, setFished] = useState([]);
@@ -29,7 +30,7 @@ const FishIndex = (props) => {
 
 
     const fetchFishPost = () => {
-        fetch('http://localhost:4000/api/fished', {
+        fetch(`${APIURL}api/fished`, {
             method: 'GET',
             headers: new Headers ({
                 'Content-Type': 'application/json',

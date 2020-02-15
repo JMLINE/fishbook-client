@@ -1,7 +1,7 @@
 
 import React, {useState, useEffect} from 'react'
 import {Button, Form, FormGroup, Label, Input, Col, Row, Container } from 'reactstrap'
-
+import APIURL from '../helpers/environment';
 
 
 const FishPost = (props) => {  
@@ -19,7 +19,7 @@ const FishPost = (props) => {
     const handleSubmit = (event)=> {
         event.preventDefault();
        
-        fetch('http://localhost:4000/api/createpost', {
+        fetch(`${APIURL}/api/createpost`, {
             method: 'POST',
             headers: new Headers({
                 "Content-Type": "application/json",

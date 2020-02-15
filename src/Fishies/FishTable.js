@@ -4,12 +4,12 @@ import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle
 } from 'reactstrap';
-
+import APIURL from '../helpers/environment';
 
 const FishTable = (props)=> {
 
 const deleteFish= (fished)=>{
-  fetch(`http://localhost:4000/api/fished/delete/${fished.id}`, {
+  fetch(`${APIURL}api/fished/delete/${fished.id}`, {
     method: 'DELETE',
     headers: new Headers ({
       'Content-Type': 'application/json',
