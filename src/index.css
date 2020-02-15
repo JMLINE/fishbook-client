@@ -5,9 +5,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ background-color: #bbe1fa;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.auth-container{
+  text-align: center;
+}
+
+.cancelButton{
+  text-align: right;
+}
+.join{
+ text-align: center;
+}
+
+.navBar{
+  background-image: url("./images/fishing2.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 100pt;
+
+  
+  background-color: #0f4c75;
+  padding: 30px;
+}
+
+.updateSubmit{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancelSubmit{
+  display: flex;
+  justify-content: space-between;
+}
+/* .cards{
+  height: 400px;
+} */
+.title{
+  text-align: center;
+}
+.cards{
+  text-align: center;
+  
+}
+
+.fishTitle{
+  text-align: center;
 }
