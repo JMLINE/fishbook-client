@@ -56,7 +56,7 @@ const deleteFish= (fished)=>{
         </CardBody>
       </Card>
       
-      // <br></br>
+       <br></br>
       
      </div>
      
