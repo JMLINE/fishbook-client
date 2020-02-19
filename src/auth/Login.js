@@ -5,6 +5,7 @@ import APIURL from '../helpers/environment';
 function Login(props) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [errorMessage, setErrorMessage]=useState('')
    
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,14 +24,23 @@ function Login(props) {
         }).then(
             (response) => response.json()
       )  .then((data) => {
-          props.updateToken(data.sessionToken)
+          if (data.hasOwnProperty('error')) {
+              setErrorMessage(data.error)
+          }
+          else{
+              props.updateToken(data.sessionToken)
+              setErrorMessage('')
+          }
     })
 }
     return (
         <div>
             <h1>Login</h1>
             <Form onSubmit={handleSubmit}>
-                <FormGroup>
+                
+                {errorMessage == '' ? <> </> : <div style={{ background: "red" }} className="alert alert-danger" role="alert">
+                    Username and password combination is incorrect. Please try again.</div>}
+                    <FormGroup>
                     <Label htmlFor="username">Username</Label>
                     <Input onChange={(e) => {setUsername(e.target.value)}} name="username" value={username} />
                 </FormGroup>

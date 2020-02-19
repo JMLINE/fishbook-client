@@ -27,10 +27,10 @@ const deleteFish= (fished)=>{
           return(
             
              
-            <div className="cards">
+            <div key={index} className="cards">
               
       <Card>
-        <CardImg style={{width: 750, height: 350}} img src ={fished.photo} alt="Card image cap" />
+        <CardImg style={{width: 750, height: 350}} src ={fished.photo} alt="Card image cap" />
         <CardBody style = {{width: 750, height: 250, backgroundColor: "white"}}>
           <CardTitle></CardTitle>
           <CardSubtitle></CardSubtitle>

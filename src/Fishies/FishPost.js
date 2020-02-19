@@ -19,7 +19,7 @@ const FishPost = (props) => {
     const handleSubmit = (event)=> {
         event.preventDefault();
        
-        fetch(`${APIURL}/api/createpost`, {
+        fetch(`${APIURL}api/createpost`, {
             method: 'POST',
             headers: new Headers({
                 "Content-Type": "application/json",
@@ -81,7 +81,7 @@ const FishPost = (props) => {
                 <Button style= {{background: "green"}} type="submit">Click to Submit</Button>
                 </Col>
                 <Col>
-                <div class="cancelButton">
+                <div className="cancelButton">
                 <Button style= {{background: "red"}}onClick={props.toggle}>Cancel</Button>
                 </div>
                 </Col>
