@@ -14,7 +14,7 @@ const FishModal = (props) => {
 
 
   return (
-    <div>
+    <div className = "postButton">
       <Button color="info" onClick={toggle}>{buttonLabel}Post a Fish!</Button>
       
       <Modal isOpen={modal} toggle={toggle}  className={className}>

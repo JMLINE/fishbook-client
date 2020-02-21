@@ -59,7 +59,7 @@ const FishPost = (props) => {
 
                 <FormGroup>
                     <Label htmlFor="Size" />
-                    <Input name="Size" placeholder='Size' onChange={(e) =>{setSize(e.target.value)} }value={size} />(Inches)
+                    <Input name="Size" placeholder='Size' onChange={(e) =>{setSize(e.target.value)} }value={size}/>(Inches)
                 </FormGroup>
                 
                 <FormGroup>
