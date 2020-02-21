@@ -22,8 +22,13 @@ const SiteBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
                 <NavItem>
-               { props.token ? <Button style = {{color: 'white'}} color = "link" onClick={props.clickLogout}>Logout</Button> : null}
-                    
+               
+                <Button color = 'link'><a target="_blank" style ={{color: 'white'}}  href="https://howtoflyfish.orvis.com/video-lessons/chapter-one-the-basics-of-fly-fishing">Fly Fishing 101</a></Button>
+
+                <Button color= "link"><a target="_blank"style ={{color: 'white'}} href="https://ag-happygrillmore-log.herokuapp.com">Cook Your Catch</a></Button>
+
+               { props.token ? <Button style = {{color: 'white'}} color = "danger" onClick={props.clickLogout}>Logout</Button> : <a style = {{color: 'black', fontSize: '20px' }}>||Catch. Post. Release||</a>}
+               
                 
                 </NavItem>  
             </Nav>

@@ -4,7 +4,6 @@ import Auth from './auth/Auth';
 import FishIndex from './Fishies/FishIndex';
 
 
-
 function App() {
 
   const [sessionToken, setSessionToken] = useState('')
@@ -38,6 +37,7 @@ function App() {
       <SiteBar token = {sessionToken} clickLogout={clearToken}/>
       {protectedViews()}
       
+      {/* <StickyFooter  /> */}
      {/* <Auth updateToken={updateToken}/> */}
      
     </div>

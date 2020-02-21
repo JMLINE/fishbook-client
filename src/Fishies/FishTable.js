@@ -5,6 +5,9 @@ import {
   CardTitle, CardSubtitle
 } from 'reactstrap';
 import APIURL from '../helpers/environment';
+import gold from '../images/gold.jpg';
+
+
 
 const FishTable = (props)=> {
 
@@ -30,9 +33,9 @@ const deleteFish= (fished)=>{
             <div key={index} className="cards">
               
       <Card>
-        <CardImg style={{width: 750, height: 350}} src ={fished.photo} alt="Card image cap" />
+        <CardImg style={{width: 750, height: 350}} src ={fished.photo ? fished.photo : gold } alt = 'fish' />
         <CardBody style = {{width: 750, height: 250, backgroundColor: "white"}}>
-          <CardTitle></CardTitle>
+          <CardTitle>{fished.createdAt}</CardTitle>
           <CardSubtitle></CardSubtitle>
          
           <CardText>
